@@ -1,0 +1,32 @@
+doctype 5
+html
+  head
+    title Title
+    meta charset="utf-8"
+    meta name="author" content="Author"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    link href="/css/bootstrap.min.css" rel="stylesheet" as="style"
+    link href="/fonts/bootstrap-icons.woff2" rel="preload" as="font" type="font/woff2"
+    link href="/css/bootstrap-icons.css" rel="stylesheet" as="style"
+    link href="/css/main.css" rel="stylesheet" as="style"
+
+  body
+
+    header class=[:"site-header", :"sticky-top", :"py-1"] id="nav"
+      nav class=[:"container", :"d-flex", :"flex-column", :"flex-md-row", :"justify-content-between"]
+        a class=[:"py-2", :"text-secondary", :"text-decoration-none"] href="/" Zoe Davidson
+        a class=[:"py-2", :"text-secondary", :"text-decoration-none"] href="/publications" Publications
+        a class=[:"py-2", :"text-secondary", :"text-decoration-none"] href="/experience" Experience
+        a class=[:"py-2", :"text-secondary", :"text-decoration-none"] href="/education" Education
+        div class=[:"py-2", :"text-secondary", :"text-decoration-none"]
+          a href="https://twitter.com/zoe_davidson_nz" target="_blank" class="btn btn-secondary"
+            i class="bi bi-twitter"
+          a href="https://www.linkedin.com/in/zoe-davidson-5b029192/" target="_blank" class="btn btn-secondary"
+            i class="bi bi-linkedin"
+          a href="https://orcid.org/0000-0001-9644-0286" target="_blank" class="btn btn-secondary"
+            i class="bi bi-link-45deg"
+
+
+    == yield
+
+    script src="/js/bootstrap.min.js"
