@@ -1,0 +1,114 @@
+# Logfile created on 2022-03-09 20:31:16 +0000 by logger.rb/v1.4.2
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-03-09 20:31:16 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bb93e3ef] Running /usr/bin/env which passenger as passengerwebuser@178.62.70.109
+ DEBUG [bb93e3ef] Command: /usr/bin/env which passenger
+ DEBUG [bb93e3ef] 	/usr/bin/passenger
+ DEBUG [bb93e3ef] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG [3c3c342d] Running [ -d ~/.rvm ] as passengerwebuser@178.62.70.109
+ DEBUG [3c3c342d] Command: [ -d ~/.rvm ]
+ DEBUG [3c3c342d] Finished in 0.092 seconds with exit status 1 (failed).
+ DEBUG [19ca150f] Running [ -d /usr/local/rvm ] as passengerwebuser@178.62.70.109
+ DEBUG [19ca150f] Command: [ -d /usr/local/rvm ]
+ DEBUG [19ca150f] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [a5e67105] Running /usr/local/rvm/bin/rvm version as passengerwebuser@178.62.70.109
+ DEBUG [a5e67105] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [a5e67105] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [a5e67105] Finished in 0.464 seconds with exit status 0 (successful).
+ DEBUG [eaff53ed] Running /usr/local/rvm/bin/rvm current as passengerwebuser@178.62.70.109
+ DEBUG [eaff53ed] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [eaff53ed] 	ruby-2.7.2
+ DEBUG [eaff53ed] Finished in 0.504 seconds with exit status 0 (successful).
+ DEBUG [c2478c04] Running /usr/local/rvm/bin/rvm default do ruby --version as passengerwebuser@178.62.70.109
+ DEBUG [c2478c04] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [c2478c04] 	ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]
+ DEBUG [c2478c04] Finished in 0.851 seconds with exit status 0 (successful).
+  INFO [ff170ee0] Running /usr/bin/env mkdir -p /tmp as passengerwebuser@178.62.70.109
+ DEBUG [ff170ee0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ff170ee0] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-a4692d382a721497856d.sh 0.0%
+  INFO Uploading /tmp/git-ssh-a4692d382a721497856d.sh 100.0%
+  INFO [c0db56fe] Running /usr/bin/env chmod 700 /tmp/git-ssh-a4692d382a721497856d.sh as passengerwebuser@178.62.70.109
+ DEBUG [c0db56fe] Command: /usr/bin/env chmod 700 /tmp/git-ssh-a4692d382a721497856d.sh
+  INFO [c0db56fe] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [6048337c] Running /usr/bin/env git ls-remote git@github.com:davidsonz/ZoeResearchWebsite.git HEAD as passengerwebuser@178.62.70.109
+ DEBUG [6048337c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a4692d382a721497856d.sh" ; /usr/bin/env git ls-remote git@github.com:davidsonz/ZoeResearchWebsite.git HEAD )
+ DEBUG [6048337c] 	Warning: Permanently added 'github.com,140.82.121.3' (ECDSA) to the list of known hosts.
+ DEBUG [6048337c] 	b03890e664af4c8bfb1027c3536afd8043f71a47	HEAD
+  INFO [6048337c] Finished in 1.416 seconds with exit status 0 (successful).
+  INFO [0a0ca188] Running /usr/bin/env mkdir -p /var/www/zoedavidsonresearch.com/shared /var/www/zoedavidsonresearch.com/releases as passengerwebuser@178.62.70.109
+ DEBUG [0a0ca188] Command: /usr/bin/env mkdir -p /var/www/zoedavidsonresearch.com/shared /var/www/zoedavidsonresearch.com/releases
+  INFO [0a0ca188] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [7c842fa1] Running [ -f /var/www/zoedavidsonresearch.com/current/REVISION ] as passengerwebuser@178.62.70.109
+ DEBUG [7c842fa1] Command: [ -f /var/www/zoedavidsonresearch.com/current/REVISION ]
+ DEBUG [7c842fa1] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [4aa18a0c] Running [ -f /var/www/zoedavidsonresearch.com/repo/HEAD ] as passengerwebuser@178.62.70.109
+ DEBUG [4aa18a0c] Command: [ -f /var/www/zoedavidsonresearch.com/repo/HEAD ]
+ DEBUG [4aa18a0c] Finished in 0.148 seconds with exit status 1 (failed).
+ DEBUG [244e576f] Running if test ! -d /var/www/zoedavidsonresearch.com; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com'" 1>&2; false; fi as passengerwebuser@178.62.70.109
+ DEBUG [244e576f] Command: if test ! -d /var/www/zoedavidsonresearch.com; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com'" 1>&2; false; fi
+ DEBUG [244e576f] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [f80d6acf] Running /usr/bin/env git clone --mirror git@github.com:davidsonz/ZoeResearchWebsite.git /var/www/zoedavidsonresearch.com/repo as passengerwebuser@178.62.70.109
+ DEBUG [f80d6acf] Command: cd /var/www/zoedavidsonresearch.com && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a4692d382a721497856d.sh" ; /usr/bin/env git clone --mirror git@github.com:davidsonz/ZoeResearchWebsite.git /var/www/zoedavidsonresearch.com/repo )
+ DEBUG [f80d6acf] 	Cloning into bare repository '/var/www/zoedavidsonresearch.com/repo'...
+  INFO [f80d6acf] Finished in 2.884 seconds with exit status 0 (successful).
+ DEBUG [96c8b748] Running if test ! -d /var/www/zoedavidsonresearch.com/repo; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/repo'" 1>&2; false; fi as passengerwebuser@178.62.70.109
+ DEBUG [96c8b748] Command: if test ! -d /var/www/zoedavidsonresearch.com/repo; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/repo'" 1>&2; false; fi
+ DEBUG [96c8b748] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [05d8bfa7] Running /usr/bin/env git remote set-url origin git@github.com:davidsonz/ZoeResearchWebsite.git as passengerwebuser@178.62.70.109
+ DEBUG [05d8bfa7] Command: cd /var/www/zoedavidsonresearch.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a4692d382a721497856d.sh" ; /usr/bin/env git remote set-url origin git@github.com:davidsonz/ZoeResearchWebsite.git )
+  INFO [05d8bfa7] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [223fdac0] Running /usr/bin/env git remote update --prune as passengerwebuser@178.62.70.109
+ DEBUG [223fdac0] Command: cd /var/www/zoedavidsonresearch.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a4692d382a721497856d.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [223fdac0] 	Fetching origin
+ DEBUG [223fdac0] 	Warning: Permanently added the ECDSA host key for IP address '140.82.121.4' to the list of known hosts.
+  INFO [223fdac0] Finished in 1.399 seconds with exit status 0 (successful).
+ DEBUG [50fd0453] Running if test ! -d /var/www/zoedavidsonresearch.com/repo; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/repo'" 1>&2; false; fi as passengerwebuser@178.62.70.109
+ DEBUG [50fd0453] Command: if test ! -d /var/www/zoedavidsonresearch.com/repo; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/repo'" 1>&2; false; fi
+ DEBUG [50fd0453] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [437c358a] Running /usr/bin/env mkdir -p /var/www/zoedavidsonresearch.com/releases/20220309203121 as passengerwebuser@178.62.70.109
+ DEBUG [437c358a] Command: cd /var/www/zoedavidsonresearch.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a4692d382a721497856d.sh" ; /usr/bin/env mkdir -p /var/www/zoedavidsonresearch.com/releases/20220309203121 )
+  INFO [437c358a] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [635d4c2b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/zoedavidsonresearch.com/releases/20220309203121 as passengerwebuser@178.62.70.109
+ DEBUG [635d4c2b] Command: cd /var/www/zoedavidsonresearch.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a4692d382a721497856d.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/zoedavidsonresearch.com/releases/20220309203121 )
+  INFO [635d4c2b] Finished in 0.177 seconds with exit status 0 (successful).
+ DEBUG [85c07689] Running if test ! -d /var/www/zoedavidsonresearch.com/repo; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/repo'" 1>&2; false; fi as passengerwebuser@178.62.70.109
+ DEBUG [85c07689] Command: if test ! -d /var/www/zoedavidsonresearch.com/repo; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/repo'" 1>&2; false; fi
+ DEBUG [85c07689] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [d8f2f7b3] Running /usr/bin/env git rev-list --max-count=1 master as passengerwebuser@178.62.70.109
+ DEBUG [d8f2f7b3] Command: cd /var/www/zoedavidsonresearch.com/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a4692d382a721497856d.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d8f2f7b3] 	865408e9117254786d2d34e0ec9b84df6a07790d
+ DEBUG [d8f2f7b3] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG [bd8f699f] Running if test ! -d /var/www/zoedavidsonresearch.com/releases/20220309203121; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/releases/20220309203121'" 1>&2; false; fi as passengerwebuser@178.62.70.109
+ DEBUG [bd8f699f] Command: if test ! -d /var/www/zoedavidsonresearch.com/releases/20220309203121; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/releases/20220309203121'" 1>&2; false; fi
+ DEBUG [bd8f699f] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [69469d59] Running /usr/bin/env echo "865408e9117254786d2d34e0ec9b84df6a07790d" > REVISION as passengerwebuser@178.62.70.109
+ DEBUG [69469d59] Command: cd /var/www/zoedavidsonresearch.com/releases/20220309203121 && /usr/bin/env echo "865408e9117254786d2d34e0ec9b84df6a07790d" > REVISION
+  INFO [69469d59] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [1bd9e84a] Running if test ! -d /var/www/zoedavidsonresearch.com/releases/20220309203121; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/releases/20220309203121'" 1>&2; false; fi as passengerwebuser@178.62.70.109
+ DEBUG [1bd9e84a] Command: if test ! -d /var/www/zoedavidsonresearch.com/releases/20220309203121; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/releases/20220309203121'" 1>&2; false; fi
+ DEBUG [1bd9e84a] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [7bc73317] Running /usr/local/rvm/bin/rvm default do bundle config --local deployment true as passengerwebuser@178.62.70.109
+ DEBUG [7bc73317] Command: cd /var/www/zoedavidsonresearch.com/releases/20220309203121 && /usr/local/rvm/bin/rvm default do bundle config --local deployment true
+  INFO [7bc73317] Finished in 1.650 seconds with exit status 0 (successful).
+  INFO [73e49e3e] Running /usr/local/rvm/bin/rvm default do bundle config --local path /var/www/zoedavidsonresearch.com/shared/bundle as passengerwebuser@178.62.70.109
+ DEBUG [73e49e3e] Command: cd /var/www/zoedavidsonresearch.com/releases/20220309203121 && /usr/local/rvm/bin/rvm default do bundle config --local path /var/www/zoedavidsonresearch.com/shared/bundle
+  INFO [73e49e3e] Finished in 1.719 seconds with exit status 0 (successful).
+  INFO [2995f0d7] Running /usr/local/rvm/bin/rvm default do bundle config --local without development:test as passengerwebuser@178.62.70.109
+ DEBUG [2995f0d7] Command: cd /var/www/zoedavidsonresearch.com/releases/20220309203121 && /usr/local/rvm/bin/rvm default do bundle config --local without development:test
+  INFO [2995f0d7] Finished in 1.534 seconds with exit status 0 (successful).
+ DEBUG [7871bc8a] Running if test ! -d /var/www/zoedavidsonresearch.com/releases/20220309203121; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/releases/20220309203121'" 1>&2; false; fi as passengerwebuser@178.62.70.109
+ DEBUG [7871bc8a] Command: if test ! -d /var/www/zoedavidsonresearch.com/releases/20220309203121; then echo "Directory does not exist '/var/www/zoedavidsonresearch.com/releases/20220309203121'" 1>&2; false; fi
+ DEBUG [7871bc8a] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [6941158b] Running /usr/local/rvm/bin/rvm default do bundle check as passengerwebuser@178.62.70.109
+ DEBUG [6941158b] Command: cd /var/www/zoedavidsonresearch.com/releases/20220309203121 && /usr/local/rvm/bin/rvm default do bundle check
+ DEBUG [6941158b] 	Your bundle only supports platforms ["arm64-darwin-20"] but your local platform
+is x86_64-linux. Add the current platform to the lockfile with `bundle lock
+--add-platform x86_64-linux` and try again.
+ DEBUG [6941158b] Finished in 1.699 seconds with exit status 16 (failed).
+  INFO [186c7220] Running /usr/local/rvm/bin/rvm default do bundle install --jobs 4 --quiet as passengerwebuser@178.62.70.109
+ DEBUG [186c7220] Command: cd /var/www/zoedavidsonresearch.com/releases/20220309203121 && /usr/local/rvm/bin/rvm default do bundle install --jobs 4 --quiet
+ DEBUG [186c7220] 	Your bundle only supports platforms ["arm64-darwin-20"] but your local platform
+is x86_64-linux. Add the current platform to the lockfile with `bundle lock
+--add-platform x86_64-linux` and try again.
